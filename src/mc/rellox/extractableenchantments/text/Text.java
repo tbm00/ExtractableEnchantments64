@@ -43,13 +43,13 @@ public final class Text {
 	}
 	
 	public static void success(String success, Object... os) {
-		String w = ChatColor.DARK_GREEN + "(!) " + ChatColor.GREEN + success;
+		String w = ChatColor.DARK_GRAY + "[" + ChatColor.WHITE + "-" + ChatColor.DARK_GRAY + "] " + ChatColor.GREEN + success;
 		if(os != null) for(int i = 0; i < os.length; i++) w = w.replace("#" + i, ChatColor.AQUA + os[i].toString() + ChatColor.GREEN);
 		Bukkit.getConsoleSender().sendMessage(w);
 	}
 	
 	public static void failure(String warning, Object... os) {
-		String w = ChatColor.DARK_RED + "(!) " + ChatColor.GOLD + warning;
+		String w = ChatColor.DARK_GRAY + "[" + ChatColor.WHITE + "-" + ChatColor.DARK_GRAY + "] " + ChatColor.GOLD + warning;
 		if(os != null) for(int i = 0; i < os.length; i++) w = w.replace("#" + i, ChatColor.YELLOW + os[i].toString() + ChatColor.GOLD);
 		Bukkit.getConsoleSender().sendMessage(w);
 	}
@@ -63,8 +63,8 @@ public final class Text {
 	public static String color(String hex) {
 		if(hex == null || hex.isEmpty() == true) return "";
 		if(hex.charAt(0) == '#') hex = hex.substring(1);
-		String s = "§x";
-		for(char c : hex.toCharArray()) s += "§" + c;
+		String s = "ï¿½x";
+		for(char c : hex.toCharArray()) s += "ï¿½" + c;
 		return s;
 	}
 	
